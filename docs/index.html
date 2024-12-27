@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AL KHALDE PHONES</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        body {
+            font-family: 'Cairo', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://i.imgur.com/BOBnmUH.jpeg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            overflow-x: hidden;
+        }
+        header {
+            background: rgba(0, 0, 0, 0.7);
+            color: #ffcc00;
+            text-align: center;
+            padding: 20px;
+        }
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.9);
+            padding: 10px 20px;
+        }
+        nav a, .menu-button {
+            color: #ffcc00;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+        nav a:hover, .menu-button:hover {
+            color: #fff;
+        }
+        .container {
+            padding: 20px;
+            display: none;
+            animation-duration: 1s;
+        }
+        .container.active {
+            display: block;
+            animation-name: fadeIn;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+        }
+        table th, table td {
+            padding: 15px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+        table th {
+            background-color: #ff7b00;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #ff7b00;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        button:hover {
+            background-color: #ffcc00;
+            transform: scale(1.1);
+        }
+        footer {
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            min-width: 150px;
+            z-index: 1;
+            text-align: right;
+        }
+        .dropdown-content a {
+            color: #ffcc00;
+            padding: 10px 15px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #ff7b00;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            nav a {
+                font-size: 0.9rem;
+            }
+            table th, table td {
+                font-size: 0.85rem;
+            }
+        }
+        img{
+            width: 30px;
+            height: 30px;
+            border-radius: 40%;
+            transition: 3s;
+        }
+        li{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header class="animate_animated animate_fadeInDown">
+        <i><h1>AL KHALDE PHONES</h1></i>
+       <p>أفضل مكان لشراء الهواتف وخدمات الإنترنت في لبنان</p> 
+     </header>
+ 
+     <nav class="animate_animated animate_fadeInUp">
+         <a href="#" onclick="showSection('home')">الرئيسية</a>
+         <a href="#" onclick="showSection('products')">المنتجات</a>
+         <a href="#" onclick="showSection('services')">الخدمات</a>
+         <a href="#" onclick="showSection('contact')">اتصل بنا</a>
+     </nav>
+ 
+     <!-- الصفحة الرئيسية -->
+     <div id="home" class="container active">
+         <h2 class="animate_animated animate_bounceIn">مرحبًا بك في محل الخالدي للهواتف</h2>
+         <p class="animate_animated animate_fadeInLeft">نقدم أحدث الهواتف الذكية وخدمات الإنترنت من Alfa وMTC Touch.</p>
+         <h3 class="animate_animated animate_bounceIn">بلاضافة لصيانة كافة انواع الهواتف الذكية</h3>
+         <div class="navigation-buttons">
+             <button onclick="showSection('products')">التالي</button>
+         </div>
+     </div>
+ 
+     <!-- قسم المنتجات -->
+     <div id="products" class="container">
+         <h2 class="animate_animated animate_bounceIn">منتجاتنا</h2><br>
+         <h4 class="animate_animated animate_bounceIn">1. آبل (Apple):</h4>
+             <p>هواتف iPhone.</p> <br>
+            <h5 class="animate_animated animate_bounceIn">2. سامسونج (Samsung):</h5>
+            <p> هواتف Galaxy، بما في ذلك سلسلة S وNote وZ (الهواتف القابلة للطي). </p><br> <h6 class="animate_animated animate_bounceIn">3.هواوي (Huawei):</h6>
+             <p>. هواتف Huawei وHonor. </p><br> <h6 class="animate_animated animate_bounceIn">4.شاومي (Xiaomi):</h6>
+             <p>. هواتف Mi وRedmi وPoco.</p>
+         
+         <div class="navigation-buttons">
+             <button onclick="showSection('home')">السابق</button>
+             <button onclick="showSection('services')">التالي</button>
+         </div>
+     </div>
+ 
+     <!-- قسم الخدمات -->
+     <div id="services" class="container">
+         <h2 class="animate_animated animate_bounceIn">خدمات الإنترنت</h2>
+         
+         <!-- جدول باقات الإنترنت -->
+         <h3>باقات الإنترنت من Alfa</h3>
+         <table>
+             <tr>
+                 <th> U_SHARE</th>
+                 <th>السعر (ليرة)</th>
+             </tr>
+             <tr>
+                 <td>5 جيجابايت</td>
+                 <td>450,000L.L</td>
+             </tr>
+             <tr>
+                 <td>10 جيجابايت</td>
+                 <td>580,000L.L</td>
+             </tr>
+             <tr>
+                 <td>15 جيجابايت</td>
+                 <td>700,000L.L</td>
+             </tr>
+             <tr>
+                 <td>20 جيجابايت</td>
+                 <td>850,000L.L</td>
+             </tr>
+             <tr>
+                 <td>30 جيجابايت</td>
+                 <td>1,100,000L.L</td>
+             </tr>
+         </table>
+ 
+         <h3 >خدمة U-Share</h3>
+         <p>تتيح مشاركة الباقات مع الآخرين.</p>
+         <p><strong>طريقة الاشتراك:</strong> إرسال "ADD USER" عبر 1050.</p>
+         
+ 
+         <!-- جدول باقات Touch -->
+         <h3>Alfa</h3>
+         <table>
+             <tr>
+                 <th>GIFT</th>
+                 <th>السعر (ليرة)</th>
+             </tr>
+             <tr>
+                 <td>6 جيجابايت</td>
+                 <td>850,000L.L</td>
+             </tr>
+             <tr>
+                 <td>10 جيجابايت</td>
+                 <td>1,050,000L.L</td>
+             </tr>
+             <tr>
+                 <td>20 جيجابايت</td>
+                 <td>1,300,000L.L</td>
+             </tr>
+             <tr>
+                 <td>30 جيجابايت</td>
+                 <td>1,550,000L.L</td>
+             </tr>
+         </table>
+         <h3>MTC</h3>
+         <table>
+             <tr>
+                 <th>MTC,TOUCH</th>
+                 <th>السعر (دولار)</th>
+             </tr>
+             <tr>
+                 <td>6 جيجابايت</td>
+                 <td>8,5$</td>
+             </tr>
+             <tr>
+                 <td>10 جيجابايت</td>
+                 <td>11$</td>
+             </tr>
+             <tr>
+                 <td>20 جيجابايت</td>
+                 <td>13$</td>
+             </tr>
+             <tr>
+                 <td>30 جيجابايت</td>
+                 <td>16$</td>
+             </tr>
+             <tr>
+                 <td>40 جيجابايت</td>
+                 <td>20$</td>
+             </tr>
+         </table>
+ 
+         <div class="navigation-buttons">
+             <button onclick="showSection('products')">السابق</button>
+             <button onclick="showSection('contact')">التالي</button>
+         </div>
+     </div>
+ 
+     <!-- قسم الاتصال -->
+     <div id="contact" class="container">
+         <h2 class="animate_animated animate_bounceIn" >اتصل بنا</h2>
+         <form>
+             
+                 
+                     <li>GMAIL:<a href="mailto:khaledabdalfattah06@gmail.com" style="color: #ff5733;">khaledabdalfattah06@gmail.com</a><img src="https://i.imgur.com/TjEKx5l.jpeg" alt="image"></li>
+                     <li>PHONE:<a href="tel:+96170304667" style="color: #ff5733;">+96170304667</a><img src="https://i.imgur.com/5cs7KtL.jpeg" alt="image"></li>
+                 
+             
+ 
+         </form>
+         <div class="navigation-buttons">
+             <button onclick="showSection('services')">السابق</button>
+             <button onclick="showSection('home')">الرئيسية</button>
+         </div>
+     </div>
+ 
+     <footer>
+         <p class="animate_animated animate_fadeInUp">© 2024 جميع الحقوق محفوظة -By Kamal al dannawi</p>
+         <p>PHONE:<a href="tel:+96181294964">+96181294964</a></p>
+     </footer>
+ 
+     <script>
+         function showSection(sectionId) {
+             const sections = document.querySelectorAll('.container');
+             sections.forEach(section => section.classList.remove('active'));
+             document.getElementById(sectionId).classList.add('active');
+         }
+     </script>
+   </body>
+</html>
